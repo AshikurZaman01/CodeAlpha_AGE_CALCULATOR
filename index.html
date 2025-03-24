@@ -39,9 +39,8 @@
                      </div>
                  </div>
 
-                   <!-- Time Zone & Options -->
-                     <div class="space-y-4">
-
+              <!-- Time Zone & Options -->
+              <div class="space-y-4">
                      <div>
                             <label class="block text-gray-700 text-sm font-bold mb-2">Time Zone</label>
                             <select id="timeZone" class="w-full p-2 border rounded">
@@ -66,16 +65,32 @@
                             </button>
                         </div>
 
-                     </div>
-
-                     
-
-                 
-
               </div>
 
-       </div>
+              <div id="results" class="mt-6 space-y-4">
+              
+                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-gray-50 p-4 rounded"><div class="text-sm text-gray-500">Years</div><div id="years" class="text-2xl font-bold">0</div></div>
+                            <div class="bg-gray-50 p-4 rounded"><div class="text-sm text-gray-500">Months</div><div id="months" class="text-2xl font-bold">0</div></div>
+                            <div class="bg-gray-50 p-4 rounded"><div class="text-sm text-gray-500">Days</div><div id="days" class="text-2xl font-bold">0</div></div>
+                            <div class="bg-gray-50 p-4 rounded"><div class="text-sm text-gray-500">Weeks</div><div id="weeks" class="text-2xl font-bold">0</div></div>
+                        </div>
+              </div>
 
+                 <div class="bg-gray-50 p-4 rounded">
+                            <h3 class="font-semibold mb-2">Detailed Time</h3>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                <div><div class="text-sm text-gray-500">Hours</div><div id="hours" class="text-xl">0</div></div>
+                                <div><div class="text-sm text-gray-500">Minutes</div><div id="minutes" class="text-xl">0</div></div>
+                                <div><div class="text-sm text-gray-500">Seconds</div><div id="seconds" class="text-xl">0</div></div>
+                            </div>
+                        </div>
+              </div>
+
+        <!-- Error Message -->
+        <div id="error" class="mt-4 text-red-500 hidden"></div>
+
+       </div>
  </body>
     
 </html>
