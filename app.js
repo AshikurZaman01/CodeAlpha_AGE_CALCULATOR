@@ -39,3 +39,33 @@ function parseDate(dateString, timeZone) {
 
    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
 }
+
+
+function getAgeDetails(birthDate, targetDate) {
+   let years = targetDate.getFullYear() - birthDate.getFullYear();
+   let months = targetDate.getMonth() - birthDate.getMonth();
+   let days = targetDate.getDate() - birthDate.getDate();
+
+   if (months < 0 || (months === 0 && days < 0)) {
+      years--;
+      months += 12;
+   }
+
+   if (days < 0) {
+      const tempDate = new Date(targetDate);
+      tempDate.setMonth(targetDate.getMonth() - 1);
+      days = Math.floor((targetDate - tempDate) / (1000 * 60 * 60 * 24)) + days;
+      months--;
+   }
+
+   const timeDiff = targetDate - birthDate;
+   return {
+      years,
+      months,
+      days,
+      weeks: Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 7)),
+      hours: Math.floor(timeDiff / (1000 * 60 * 60)),
+      minutes: Math.floor(timeDiff / (1000 * 60)),
+      seconds: Math.floor(timeDiff / 1000)
+   };
+}
