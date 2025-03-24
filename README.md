@@ -42,7 +42,7 @@ Developed as part of the **CodeAlpha Internship Program**, this project demonstr
 
 ## Live Demo 🌐
 
-Check out the live demo [here](#)!
+Check out the live demo [https://ornate-gnome-77c53a.netlify.app/](#)!
 
 ---
 
