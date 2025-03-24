@@ -69,3 +69,17 @@ function getAgeDetails(birthDate, targetDate) {
       seconds: Math.floor(timeDiff / 1000)
    };
 }
+
+function updateDisplay(ageDetails) {
+   Object.keys(ageDetails).forEach(key => document.getElementById(key).textContent = ageDetails[key].toLocaleString());
+}
+
+function clearResults() {
+   ['years', 'months', 'days', 'weeks', 'hours', 'minutes', 'seconds'].forEach(id => document.getElementById(id).textContent = '0');
+}
+
+function showError(message) {
+   const errorDiv = document.getElementById('error');
+   errorDiv.textContent = message;
+   errorDiv.classList.remove('hidden');
+}
