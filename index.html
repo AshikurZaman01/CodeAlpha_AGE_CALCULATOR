@@ -7,6 +7,44 @@
         <script src="https://cdn.tailwindcss.com"></script>
  </head>
 
- <body class="bg-gray-100 min-h-screen p-8"></body>
+ <body class="bg-gray-100 min-h-screen p-8">
+       <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-6">
+
+              <h1 class="text-3xl font-bold text-gray-800 mb-6">Age Calculator</h1>
+
+              <!-- Main Input Section -->
+              <div class="grid md:grid-cols-2 gap-6">
+
+                 <!-- Birth Date Input -->
+                 <div class="space-y-4">
+                     <div>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Birth Date</label>
+                            <input type="date" id="birthDate" class="w-full p-2 border rounded">
+                     </div>
+
+                     <!-- Comparison Date -->
+                     <div class="mt-4">
+                            <label class="inline-flex items-center">
+                            <input type="checkbox" id="compareCheckbox" class="form-checkbox">
+                            <span class="ml-2 text-gray-700">Compare Dates</span>
+                            </label>
+                            <div id="compareDateSection" class="hidden mt-2">
+                            <input type="date" id="compareDate" class="w-full p-2 border rounded">
+                            </div>
+                     </div>
+
+                     <div class="mt-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Future Date</label>
+                            <input type="date" id="futureDate" class="w-full p-2 border rounded">
+                     </div>
+                 </div>
+
+                 
+
+              </div>
+
+       </div>
+
+ </body>
     
 </html>
