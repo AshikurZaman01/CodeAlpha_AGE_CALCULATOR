@@ -12,7 +12,7 @@ The **Age Calculator** is a simple, user-friendly web application designed to ca
 
 ## Technologies Used 🛠️
 
-- **Frontend**: HTML5, CSS3, JavaScript
+- **Frontend**: HTML5, CSS3, JavaScript, Tailwind CSS
 - **Utilities**: [Date-fns](https://date-fns.org/) library for date calculations
 
 ## How to Use 📝
