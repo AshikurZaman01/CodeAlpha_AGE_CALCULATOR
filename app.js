@@ -28,3 +28,14 @@ function calculateAge() {
    const ageDetails = getAgeDetails(birthDate, targetDate);
    updateDisplay(ageDetails);
 }
+
+
+function parseDate(dateString, timeZone) {
+   const date = new Date(dateString);
+
+   if (timeZone === 'UTC') {
+      return new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
+   }
+
+   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
